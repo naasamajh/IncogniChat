@@ -186,8 +186,8 @@ AnonChat/
 ## 🔑 Admin Access
 
 Login with the fixed admin credentials:
-- **Email**: `admin@gmail.com`
-- **Password**: `Admin@0426`
+- **Email**: `admingmail`
+- **Password**: `AdminPass`
 
 ## 📧 Email Setup
 
