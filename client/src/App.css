@@ -1,0 +1,26 @@
+/* ===== App-level Styles ===== */
+.app-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading-logo {
+  font-size: 64px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.loading-container p {
+  color: var(--text-muted);
+  font-size: 14px;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,285 @@
+/* ===== Auth Pages Styles ===== */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 24px;
+    transition: color var(--transition-fast);
+}
+
+.auth-back:hover {
+    color: var(--accent-secondary);
+}
+
+.auth-card {
+    padding: 40px;
+    border-radius: var(--radius-xl);
+    animation: borderGlow 4s ease-in-out infinite;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-logo {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.auth-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.auth-subtitle strong {
+    color: var(--accent-secondary);
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 32px;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.progress-step span {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-input);
+    border: 2px solid var(--border-color);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-muted);
+    transition: all var(--transition-normal);
+}
+
+.progress-step.active .step-circle {
+    background: var(--gradient-primary);
+    border-color: var(--accent-primary);
+    color: white;
+}
+
+.progress-step.completed .step-circle {
+    background: var(--gradient-success);
+    border-color: var(--success);
+    color: white;
+}
+
+.progress-step.active span,
+.progress-step.completed span {
+    color: var(--text-primary);
+}
+
+.progress-line {
+    width: 60px;
+    height: 2px;
+    background: var(--border-color);
+    margin: 0 12px;
+    margin-bottom: 20px;
+    transition: background var(--transition-normal);
+}
+
+.progress-line.active {
+    background: var(--gradient-primary);
+}
+
+/* Form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.form-input.with-icon {
+    padding-left: 42px;
+}
+
+.auth-submit {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.btn-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* OTP */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.otp-input {
+    width: 52px;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    background: var(--bg-input);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    outline: none;
+    transition: all var(--transition-normal);
+}
+
+.otp-input:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+    background: rgba(25, 25, 70, 0.5);
+}
+
+.resend-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resend-section p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.auth-footer {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.auth-footer p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.auth-link {
+    color: var(--accent-secondary);
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.auth-link:hover {
+    color: var(--accent-tertiary);
+}
+
+.auth-divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0 12px;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.auth-divider span {
+    position: relative;
+    background: var(--bg-tertiary);
+    padding: 0 16px;
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.admin-hint {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 540px) {
+    .auth-card {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .otp-input {
+        width: 44px;
+        height: 52px;
+        font-size: 20px;
+    }
+}
